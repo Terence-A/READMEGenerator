@@ -86,13 +86,13 @@ const questions = [
   {
     type: "input",
     name: "tests",
-    message: "Write tests for app, and provide examples on how to runt them",
+    message: "Write tests for app, and provide examples on how to run them",
     validate: (testsInput) => {
       if (testsInput) {
         return true;
       } else {
         console.log(
-          "Write tests for app, and provide examples on how to runt them"
+          "Write tests for app, and provide examples on how to run them"
         );
         return false;
       }
@@ -139,16 +139,19 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-  fs.writeFile(fileName);
+function writeToFile(content) {
+  fs.writeFile("./generatedREADME.md", content, (err) => {
+    if (err) throw err;
+    console.log("README file genterated!!");
+  });
 }
 
 // TODO: Create a function to initialize app
 function init() {
-  inquirer.prompt(questions).then(function (answers) {
+  inquirer.prompt(questions).then((answers) => {
     console.log(answers);
-    // let fileName = "README.md";
-    // writeToFile(fileName, answers);
+    let content = generateMarkdown(answers);
+    writeToFile(content);
   });
 }
 
