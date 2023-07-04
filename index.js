@@ -11,12 +11,12 @@ const questions = [
   {
     type: "input",
     name: "projectTitle",
-    message: "Please enter your project name",
+    message: "Please enter your project name: ",
     validate: (projectTitleInput) => {
       if (projectTitleInput) {
         return true;
       } else {
-        console.log("Please enter your project name!");
+        console.log("Please enter your project name! ");
         return false;
       }
     },
@@ -24,12 +24,12 @@ const questions = [
   {
     type: "input",
     name: "description",
-    message: "Please provide a short description of your project.",
+    message: "Please provide a short description of your project: ",
     validate: (descriptionInput) => {
       if (descriptionInput) {
         return true;
       } else {
-        console.log("Please provide a short desription!");
+        console.log("Please provide a short desription! ");
         return false;
       }
     },
@@ -38,12 +38,12 @@ const questions = [
   {
     type: "input",
     name: "installation",
-    message: "What are the steps required to install your project?",
+    message: "What are the steps required to install your project? ",
     validate: (installationInput) => {
       if (installationInput) {
         return true;
       } else {
-        console.log("What re the steps required to insall your project?");
+        console.log("What re the steps required to insall your project? ");
         return false;
       }
     },
@@ -51,12 +51,12 @@ const questions = [
   {
     type: "input",
     name: "usage",
-    message: "Provide instructions and examples for use",
+    message: "Provide instructions and examples for use: ",
     validate: (usageInput) => {
       if (usageInput) {
         return true;
       } else {
-        console.log("Provide instructions and examples for use!");
+        console.log("Provide instructions and examples for use! ");
         return false;
       }
     },
@@ -65,19 +65,19 @@ const questions = [
     type: "list",
     name: "license",
     message:
-      "If you would like to add a license please pick one from the list below.",
+      "If you would like to add a license please pick one from the list below. ",
     choices: ["None", "Apache", "MIT", "BSD", "Boost"],
   },
   {
     type: "input",
     name: "contribution",
-    message: "Guidelines on how user can contribute to your repository",
+    message: "Guidelines on how user can contribute to your repository: ",
     validate: (contributionInput) => {
       if (contributionInput) {
         return true;
       } else {
         console.log(
-          "Guidelines on how user can contribute to your repository!"
+          "Guidelines on how user can contribute to your repository! "
         );
         return false;
       }
@@ -86,13 +86,13 @@ const questions = [
   {
     type: "input",
     name: "tests",
-    message: "Write tests for app, and provide examples on how to run them",
+    message: "Write tests for app, and provide examples on how to run them: ",
     validate: (testsInput) => {
       if (testsInput) {
         return true;
       } else {
         console.log(
-          "Write tests for app, and provide examples on how to run them"
+          "Write tests for app, and provide examples on how to run them: "
         );
         return false;
       }
@@ -101,12 +101,12 @@ const questions = [
   {
     type: "input",
     name: "questions",
-    message: "Instructions on how you can be reached by user.",
+    message: "Instructions on how you can be reached by user: ",
     validate: (questionsInput) => {
       if (questionsInput) {
         return true;
       } else {
-        console.log("Instructions on how you can be reached by user!");
+        console.log("Instructions on how you can be reached by user! ");
         return false;
       }
     },
@@ -114,12 +114,12 @@ const questions = [
   {
     type: "input",
     name: "userName",
-    message: "Please provide your GitHub username",
+    message: "Please provide your GitHub username: ",
     validate: (userNameInput) => {
       if (userNameInput) {
         return true;
       } else {
-        console.log("Please provide your GitHub username");
+        console.log("Please provide your GitHub username: ");
         return false;
       }
     },
@@ -127,7 +127,7 @@ const questions = [
   {
     type: "input",
     name: "email",
-    message: "Please provide your email address",
+    message: "Please provide your email address: ",
     validate: (emailInput) => {
       if (validator.validate(emailInput)) {
         return true;
