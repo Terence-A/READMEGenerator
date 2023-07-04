@@ -63,7 +63,7 @@ const questions = [
   },
   {
     type: "list",
-    name: "License",
+    name: "license",
     message:
       "If you would like to add a license please pick one from the list below.",
     choices: ["None", "Apache", "MIT", "BSD", "Boost"],
@@ -149,7 +149,7 @@ function writeToFile(content) {
 // TODO: Create a function to initialize app
 function init() {
   inquirer.prompt(questions).then((answers) => {
-    console.log(answers);
+    // console.log(answers);
     let content = generateMarkdown(answers);
     writeToFile(content);
   });
