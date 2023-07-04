@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Terence-A/READMEGenerator#readme",
   "dependencies": {
+    "badge-maker": "^3.3.1",
     "email-validator": "^2.0.4",
     "inquirer": "^8.2.4"
   }
