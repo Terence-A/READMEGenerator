@@ -1,5 +1,10 @@
+const fs = require("fs");
+const inquirer = require("inquirer");
+const index = require("../index");
+
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
+
 function renderLicenseBadge(license) {
   let badge = "";
   if (license === "Apache") {
@@ -50,14 +55,40 @@ function renderLicenseSection(license) {
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
+function generateMarkdown(answers) {
+  return `
+  # ${answers.projectTitle}
 
-  ## Descritions
-  ${data.description}
+  ## ${renderLicenseBadge(answers.license)} ${renderLicenseLink(
+    answers.license
+  )}
+  ### ${renderLicenseLink(answers.license)}
 
+  ## Table of Contents
+  - 
+
+  ## Descrtiption
+  - ${answers.description}
+
+  ## Installation:
+  ### Here is what you will need to install for this application
+  - ${answers.installation}
+
+  ## Usage
+  - ${answers.usage}
+
+  ## Contribution
+  - ${answers.contribution}
+
+  ## Tests
+  ## Run test in terminal to test app
+  - ${answers.tests}
+
+  ## Questions
+  ### If you have any question, I can be reached at
+  - Github: https://github.com/${answers.userName}
+  - Email: ${answers.email}
 `;
 }
 
 module.exports = generateMarkdown;
-"Apache", "MIT", "BSD", "Boost";
