@@ -100,19 +100,6 @@ const questions = [
   },
   {
     type: "input",
-    name: "questions",
-    message: "Instructions on how you can be reached by user: ",
-    validate: (questionsInput) => {
-      if (questionsInput) {
-        return true;
-      } else {
-        console.log("Instructions on how you can be reached by user! ");
-        return false;
-      }
-    },
-  },
-  {
-    type: "input",
     name: "userName",
     message: "Please provide your GitHub username: ",
     validate: (userNameInput) => {
@@ -149,8 +136,9 @@ function writeToFile(content) {
 // TODO: Create a function to initialize app
 function init() {
   inquirer.prompt(questions).then((answers) => {
+    let content = "";
     // console.log(answers);
-    let content = generateMarkdown(answers);
+    content = generateMarkdown(answers);
     writeToFile(content);
   });
 }
