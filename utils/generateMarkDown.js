@@ -76,7 +76,7 @@ function generateMarkdown(answers) {
   - [Installation](#installation)
   - [Usage](#usage)
   - [Contribution](#contribution)
-  - [Tests](#test)
+  - [Tests](#tests)
   - [Questions](#questions)
 
 
